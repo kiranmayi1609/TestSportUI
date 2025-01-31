@@ -12,6 +12,9 @@ import { InvoiceComponent } from './invoice/invoice.component';
 import { NewsComponent } from './news/news.component';
 import { TrainingComponent } from './training/training.component';
 import { TournmentComponent } from './tournment/tournment.component';
+import { CommunityComponent } from './community/community.component';
+import { SessionListComponent } from './session-list/session-list.component';
+import { SessionDetailsComponent } from './session-details/session-details.component';
 
 export const routes: Routes = [
 
@@ -25,7 +28,10 @@ export const routes: Routes = [
   {path:'dashboard',component:DashboardComponent},
   {path:'invoice',component:InvoiceComponent},
   {path:'training',component:TrainingComponent},
-  {path:'tournment',component:TournmentComponent}
+  {path:'tournments',component:TournmentComponent},
+  {path:'community',component:CommunityComponent},
+  {path:'sessionList',component:SessionListComponent},
+  {path:'sessionDetail',component:SessionDetailsComponent}
 
 
 

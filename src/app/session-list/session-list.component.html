@@ -1,0 +1,30 @@
+
+<!-- Search form -->
+<form class="d-flex" role="search" (submit)="searchSessions(searchQuery)">
+    <input class="form-control me-2"  placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success" type="submit">Find hold</button>
+  </form>
+<div class="container">
+    <div class="filters">
+        <button class="filter-btn">Vis alle</button>
+        <button class="filter-btn">Holdgrupper</button>
+        <button class="filter-btn">Pladsstatus</button>
+        <button class="filter-btn">Tidspunkt</button>
+        
+    </div>
+
+    <div class="session-card" *ngFor="let session of sessions" (click)="viewDetails(session.id)">
+        <div class="session-image">
+            <img [src]="session.imageUrl" alt="session image" >
+        </div>
+        <div class="session-info">
+            <h3>{{session.title}}</h3>
+            <p><strong>Antal tilmeldte:</strong>{{session.participants}}</p>
+            <p><strong>Alder:</strong>{{session.ageGroup}}</p>
+            <p><strong>Pris:</strong>{{session.price}}</p>
+            <p><strong>Instruktør:</strong>{{session.instructor}}</p>
+            <p><strong>Beskrivelse:</strong><span [innerHTML]="session.description"></span></p>
+            <button class="details-btn">Read More</button>
+        </div>
+    </div>
+</div>

@@ -19,7 +19,7 @@ export class HomeComponent  {
  
   
   navigateTo(route: string) {
-    this.router.navigate([`/{training}`]);  // Navigate to the selected page
+    this.router.navigate([`/${route}`]);  // Dynamically navigates based on parameter 
   }
 
   

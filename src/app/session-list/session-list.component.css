@@ -1,0 +1,134 @@
+/* Header/Navigation styles */
+form.d-flex {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  input.form-control {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    width: 300px;
+  }
+  
+  button.btn-outline-success {
+    background-color: gold;
+    color: black;
+    border: 2px solid gold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button.btn-outline-success:hover {
+    background-color: black;
+    color: gold;
+  }
+  
+  /* Filters section */
+  .filters {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .filter-btn {
+    background-color: white;
+    color: black;
+    border: 2px solid gold;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .filter-btn:hover {
+    background-color: gold;
+    color: black;
+  }
+  
+  /* Container for session cards */
+  .container {
+    padding: 20px;
+  }
+  
+  .session-card {
+    display: flex;
+    margin-bottom: 20px;
+    background-color: white;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .session-image {
+    flex: 1;
+    background-color: #f4f4f4;
+  }
+  
+  .session-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .session-info {
+    flex: 2;
+    padding: 20px;
+  }
+  
+  .session-info h3 {
+    color: black;
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  
+  .session-info p {
+    color: #555;
+    margin-bottom: 8px;
+  }
+  
+  .session-info strong {
+    color: black;
+  }
+  
+  .details-btn {
+    background-color: gold;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .details-btn:hover {
+    background-color: black;
+    color: gold;
+  }
+  
+  /* Hover Effect for Session Cards */
+  .session-card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .session-card {
+      flex-direction: column;
+    }
+  
+    .session-image img {
+      height: 200px;
+    }
+  
+    .session-info {
+      padding: 15px;
+    }
+  }

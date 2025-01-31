@@ -1,0 +1,9 @@
+<div class="container">
+    <h2>{{session?.title}}</h2>
+    <p><strong>Antal tilmeldte:</strong>{{session?.participants}}</p>
+    <p><strong>Alder:</strong>{{session?.ageGroup}}</p>
+    <p><strong>Pris:</strong>{{session?.price}} DKK</p>
+    <p><strong>Instruktør:</strong>{{session?.Instruktor}}</p>
+    <p><strong>Beskrivelse:</strong> <span [innerHtml]="session?.description"></span></p>
+    <button (click)="goBack()">Tilbage</button>
+</div>
