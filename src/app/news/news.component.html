@@ -1,0 +1,9 @@
+<p>news works!</p>
+<h2>Badminton News</h2>
+<ul>
+    <li *ngFor="let news of newList">
+        <h3>{{news.title}}</h3>
+        <p>{{news.description}}</p>
+        <a href="news.url" target="_blank">Read More</a>
+    </li>
+</ul>

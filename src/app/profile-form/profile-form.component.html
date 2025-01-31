@@ -1,0 +1,120 @@
+
+
+<div class="form-container">
+  <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+    <!-- Header Section -->
+    <div class="form-header">
+      <h2>Opret profil</h2>
+      <button mat-icon-button class="close-button" (click)="closeForm()">
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+
+    <!-- Login Info Section -->
+    <fieldset class="login-info">
+      <legend>Login Info</legend>
+      <div class="form-group">
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input matInput formControlName="email" type="email" />
+          <mat-error *ngIf="profileForm.get('email')?.hasError('required')">Email is required</mat-error>
+          <mat-error *ngIf="profileForm.get('email')?.hasError('email')">Enter a valid email</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Confirm Email</mat-label>
+          <input matInput formControlName="confirmEmail" type="email" />
+          <mat-error *ngIf="profileForm.get('confirmEmail')?.hasError('required')">Confirm email is required</mat-error>
+          <mat-error *ngIf="profileForm.get('confirmEmail')?.hasError('email')">Enter a valid email</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="form-group">
+        <mat-form-field appearance="outline">
+          <mat-label>kodeord</mat-label>
+          <input matInput formControlName="email" type="email" />
+          <mat-error *ngIf="profileForm.get('email')?.hasError('required')">Email is required</mat-error>
+          <mat-error *ngIf="profileForm.get('email')?.hasError('email')">Enter a valid email</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Gentag kodeord</mat-label>
+          <input matInput formControlName="confirmEmail" type="email" />
+          <mat-error *ngIf="profileForm.get('confirmEmail')?.hasError('required')">Confirm email is required</mat-error>
+          <mat-error *ngIf="profileForm.get('confirmEmail')?.hasError('email')">Enter a valid email</mat-error>
+        </mat-form-field>
+        
+      </div>
+
+      <div class="form-group">
+        <mat-form-field appearance="outline">
+          <mat-label>dd-mm-åååå</mat-label>
+          <input matInput formControlName="email" type="email" />
+          <mat-error *ngIf="profileForm.get('email')?.hasError('required')">Email is required</mat-error>
+          <mat-error *ngIf="profileForm.get('email')?.hasError('email')">Enter a valid email</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Mobil(max 8 tegn)</mat-label>
+          <input matInput formControlName="confirmEmail" type="email" />
+          <mat-error *ngIf="profileForm.get('confirmEmail')?.hasError('required')">Confirm email is required</mat-error>
+          <mat-error *ngIf="profileForm.get('confirmEmail')?.hasError('email')">Enter a valid email</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="form-group">
+        <mat-form-field appearance="outline">
+          <mat-label>Exstra mail 1(Valgfrit)</mat-label>
+          <input matInput formControlName="email" type="email" />
+          <mat-error *ngIf="profileForm.get('email')?.hasError('required')">Email is required</mat-error>
+          <mat-error *ngIf="profileForm.get('email')?.hasError('email')">Enter a valid email</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Exstra mail 2 (Valgfrit)</mat-label>
+          <input matInput formControlName="confirmEmail" type="email" />
+          <mat-error *ngIf="profileForm.get('confirmEmail')?.hasError('required')">Confirm email is required</mat-error>
+          <mat-error *ngIf="profileForm.get('confirmEmail')?.hasError('email')">Enter a valid email</mat-error>
+        </mat-form-field>
+       
+      </div>
+      <div class="button-group">
+        <p>Do you agree?</p>
+      <button class="toggle-button" id="yes-button">Yes</button>
+      <button class="toggle-button" id="no-button">No</button>
+    </div>
+    </fieldset>
+
+
+    <fieldset class="Kontakt-info">
+      <legend>Kontakt Info</legend>
+      <div class="form-group">
+        <mat-form-field appearance="outline">
+          <mat-label>Fornavn</mat-label>
+          <input matInput formControlName="email" type="email" />
+          <mat-error *ngIf="profileForm.get('email')?.hasError('required')">Email is required</mat-error>
+          <mat-error *ngIf="profileForm.get('email')?.hasError('email')">Enter a valid email</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Efternavn</mat-label>
+          <input matInput formControlName="confirmEmail" type="email" />
+          <mat-error *ngIf="profileForm.get('confirmEmail')?.hasError('required')">Confirm email is required</mat-error>
+          <mat-error *ngIf="profileForm.get('confirmEmail')?.hasError('email')">Enter a valid email</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="form-group">
+        <mat-form-field appearance="outline">
+          <mat-label>Addresse</mat-label>
+          <input matInput formControlName="email" type="email" />
+          <mat-error *ngIf="profileForm.get('email')?.hasError('required')">Email is required</mat-error>
+          <mat-error *ngIf="profileForm.get('email')?.hasError('email')">Enter a valid email</mat-error>
+        </mat-form-field>
+      </div>
+    </fieldset>
+     <div class="button-group">
+      <p>Select Your gender</p>
+      <button class="toggle-button" id="mand-button">Mand</button>
+      <button class="toggle-button" id="kvinde-button">Kvinde</button>
+     </div>
+
+    <div class="form-group">
+      <button mat-raised-button color="primary" type="submit" [disabled]="profileForm.invalid">Submit</button>
+    </div>
+  </form>
+</div>
+
+
