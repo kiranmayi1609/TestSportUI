@@ -33,7 +33,34 @@ export class SessionListComponent implements OnInit{
     description: 'Dette er tilmelding til Basis Barn - Mandag.',
     imageUrl: 'https://via.placeholder.com/150'
 
-  }];
+  },
+  {
+
+  id: 3,
+  title: 'Fredags morgenfjer - Januar og Februar',
+  participants: '7/12',
+  ageGroup: '14-99',
+  price: 150.00,
+  instructor: 'Philip Stack',
+  description: 'Tilmeld dig vores åbne morgentræning hver fredag morgen fra <strong>06:30-07:30</strong>.',
+  imageUrl: 'https://via.placeholder.com/150'
+
+},
+{
+
+  id: 4,
+  title: 'Fredags morgenfjer - Januar og Februar',
+  participants: '7/12',
+  ageGroup: '14-99',
+  price: 150.00,
+  instructor: 'Philip Stack',
+  description: 'Tilmeld dig vores åbne morgentræning hver fredag morgen fra <strong>06:30-07:30</strong>.',
+  imageUrl: 'https://via.placeholder.com/150'
+
+},
+
+  
+];
 
   filteredSessions = [...this.sessions];
   constructor(private router: Router) {}
