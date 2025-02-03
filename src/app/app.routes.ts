@@ -15,6 +15,7 @@ import { TournmentComponent } from './tournment/tournment.component';
 import { CommunityComponent } from './community/community.component';
 import { SessionListComponent } from './session-list/session-list.component';
 import { SessionDetailsComponent } from './session-details/session-details.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 
 export const routes: Routes = [
 
@@ -26,6 +27,7 @@ export const routes: Routes = [
   {path:'about',component:AboutComponent},
   {path:'news',component:NewsComponent},
   {path:'dashboard',component:DashboardComponent},
+  {path:'admin',component:AdminDashboardComponent},
   {path:'invoice',component:InvoiceComponent},
   {path:'training',component:TrainingComponent},
   {path:'tournments',component:TournmentComponent},
