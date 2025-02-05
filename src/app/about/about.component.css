@@ -30,18 +30,20 @@
   /* Trainers Section */
   .trainers-section {
     flex: 1;
-    background: #1a1a1a;
-    padding: 40px;
+    /* background: #1a1a1a; */
+    padding: 50px;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+    justify-content: center;
+    /* clip-path: polygon(0 0, 80% 0, 85% 100%, 0% 100%); */
+    clip-path: polygon(30% 0,100% 0%,100% 100%,0% 100%);
   }
   
   .trainer-card {
     display: flex;
     align-items: center;
-    background: rgba(255, 255, 255, 0.1);
+    /* background: rgba(255, 255, 255, 0.1); */
     padding: 20px;
     border-radius: 10px;
   }
@@ -76,4 +78,45 @@
   .btn:hover {
     background: #ffffff;
     color: #1a1a1a;
+  }
+
+  @keyframes jump-around {
+    0%{
+      transform: translate(0,0) rotate(0deg);
+    }
+
+    25%{
+      transform: translate(20px,-30px) rotate(10deg);
+    }
+    50%{
+      transform: translate(0,-60px) rotate(0deg);
+    }
+    75%{
+      transform: translate(-20px,-30px) rotate(-10deg);
+    }
+    100%{
+      transform: translate(0,0) rotate(0deg);
+    }
+  }
+
+  .jump-image {
+    display: block;
+    max-width: 100%;
+    animation:jump-around 2s infinite ease-in-out;
+  }
+  @media(max-width:768px){
+    .about-container{
+      flex-direction: column;
+
+    }
+    .about-content{
+      max-width: 100%;
+      text-align: center;
+
+    }
+
+    .trainers-section{
+      clip-path: none;
+      padding: 20px;
+    }
   }
