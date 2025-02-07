@@ -10,5 +10,15 @@ namespace SportTestAPI.Database
         {
             
         }
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+
+            builder.Entity<User>().Property(u=>u.Username).HasMaxLength(10);
+            builder.HasDefaultSchema("Identity");
+        }
+
+        
     }
 }

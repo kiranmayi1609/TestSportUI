@@ -4,6 +4,6 @@ namespace SportTestAPI.Database
 {
     public class User:IdentityUser
     {
-        public string? Initials { get; set; }
+        public string? Username{ get; set; }
     }
 }
