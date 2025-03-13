@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace SportTestAPI.Controllers
+namespace TestSportAPI.Controllers
 {
     [ApiController]
     [Route("[controller]")]
