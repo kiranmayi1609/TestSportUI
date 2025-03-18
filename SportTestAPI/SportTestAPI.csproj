@@ -21,10 +21,13 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="9.0.3" />
     <PackageReference Include="MimeKit" Version="4.9.0" />
     <PackageReference Include="NETCore.MailKit" Version="2.0.3" />
+    <PackageReference Include="PayPal" Version="1.9.1" />
     <PackageReference Include="QRCoder" Version="1.6.0" />
     <PackageReference Include="SKiaSharp" Version="3.116.1" />
+    <PackageReference Include="Stripe.net" Version="47.3.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
     <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="7.3.0" />
     <PackageReference Include="System.Drawing.Common" Version="9.0.2" />

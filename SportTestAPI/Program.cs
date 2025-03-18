@@ -137,6 +137,7 @@ app.UseAuthentication(); // Missing in your code
 app.UseAuthorization();
 app.MapIdentityApi<ApplicationUser>();
 
+
 app.MapControllers(); // Ensures controllers are mapped
 
 app.Run();

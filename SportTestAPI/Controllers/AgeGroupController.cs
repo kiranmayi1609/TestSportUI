@@ -12,7 +12,7 @@ namespace SportTestAPI.Controllers
     /// </summary>
     [Route("api/[controller]")]
     [ApiController]
-    [ApiExplorerSettings(GroupName = "SportsAPI")] // Group under SportsAPI
+    //[ApiExplorerSettings(GroupName = "SportsAPI")] // Group under SportsAPI
     [SwaggerTag("SportsTestAPI")] // Add this tag in Swagger UI
     public class AgeGroupController : ControllerBase
     {
