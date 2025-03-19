@@ -17,6 +17,8 @@ import { ProfileComponent } from './auth/profile/profile.component';
 import { LoginComponent } from './auth/login/login.component';
 import { DashboardComponent } from '../dashboard/Member/dashboard.component';
 import { AdminDashboardComponent } from '../dashboard/admin-dashboard/admin-dashboard.component';
+import { PaymentComponent } from './payment/payment.component';
+
 
 
 export const routes: Routes = [
@@ -35,7 +37,8 @@ export const routes: Routes = [
   {path:'tournments',component:TournmentComponent},
   {path:'community',component:CommunityComponent},
   {path:'sessionList',component:SessionListComponent},
-  {path:'sessionDetail',component:SessionDetailsComponent}
+  {path:'sessionDetail',component:SessionDetailsComponent},
+  {path:'payment',component:PaymentComponent}
 
 
 

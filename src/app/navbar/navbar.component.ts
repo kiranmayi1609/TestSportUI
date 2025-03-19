@@ -20,11 +20,11 @@ export class NavbarComponent {
   navigateToTeams() {
     this.router.navigate(['/team']);
   }
+
  
-  
-
+  searchText:string='';
+  currentPage:string='home';
   backgroundImageUrl:string;
-
 
 
   constructor(private router:Router) {
@@ -33,5 +33,10 @@ export class NavbarComponent {
 
    
   }
+
+  //perform search action 
+ performSearch(){
+  alert('Searching for :' + this.searchText);
+ }
 
 }

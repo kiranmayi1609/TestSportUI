@@ -6,7 +6,7 @@
   justify-content: center;
   height: 80vh;
   text-align: center;
-  background: linear-gradient(to bottom, #1a1a1a, #111);
+  /* background: linear-gradient(to bottom, #1a1a1a, #111); */
   color: #fff;
 }
 
@@ -14,41 +14,64 @@
   font-size: 48px;
   color: #d4af37;
   margin-bottom: 20px;
-}
+  padding: 10px;
+  font-weight: bold;
+} 
 
 .hero p {
   font-size: 18px;
   margin-bottom: 30px;
   max-width: 600px;
 }
-
-.hero button {
+ .hero button {
   padding: 10px 20px;
-  /* border: 1px solid #d4af37; */
+ 
   background-color: #d4af37 ;
   font-style: italic;
   font-family: Verdana;
-  /* background-color: transparent; */
+ 
   color: #111;
   font-size: 16px;
   cursor: pointer;
   transition: background 0.3s, color 0.3s;
-}
+} 
 
-.hero button:hover {
+ .hero button:hover {
   background-color: #d4af37;
   color: #111;
-}
+} 
 
  img {
-  /* display: block;
-  margin: auto; */
+  
   border-radius: 10px;
   position:absolute;
   top:8px;
   left:12px;
   font-size: 20px;
 
+  }
+
+  .top-images {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .player-image {
+    bottom: 200px;
+    /* width: 70%; */
+    max-width: 190px;
+  }
+  
+  .shuttle {
+    position: absolute;
+    bottom: 200;
+    right: 10%;
+    transform: rotate(10deg);
+    top: 20px;
+    max-width: 100px;
   }
 
   /* .shuttle {
@@ -60,20 +83,23 @@
    
   } */
 
-  .shuttle {
+  /* .shuttle {
     position: absolute;
   bottom: 135;
   right: 0;
-  transform: rotate(90deg); /* Adjust the degree of rotation as needed */
+  transform: rotate(90deg); 
   width: 200px;
-  }
+  } */
 
 /* Card Section */
 .cards-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   gap: 20px;
   padding: 40px;
+  width:auto;
+
+  
 }
 
 .card {
@@ -98,13 +124,15 @@
 }
 
 .card h3 {
-  font-size: 20px;
+  font-size: 48px;
   color: #d4af37; /* Gold text */
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .card p {
-  font-size: 14px;
+  font-size: 18px;
+  margin-bottom: 30px;
+  max-width:600px;
   color: #aaa;
 }
 
@@ -115,4 +143,142 @@ footer {
   background-color: #111;
   color: #fff;
   font-size: 14px;
+}
+
+
+/* New model */
+.hero {
+  position:relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height:60vh;
+  text-align:center;
+  color:#fff;
+  overflow:hidden;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap:20px;
+  padding: 50px;
+  background:linear-gradient(to bottom,#111,#222)
+
+}
+
+.card{
+  background-color: #222;
+  border:1px solid #444;
+  border-radius: 10px;
+  padding:20px;
+  width:300px;
+  text-align: center;
+  cursor: pointer;
+  transition:transform 0.3s, box-shadow 0.3s;
+  position:relative;
+  overflow:hidden;
+}
+
+.card:hover {
+  transform:translateY(-10px);
+  box-shadow:0 10px 20px rgba(0,0,0,0.5);
+}
+.card img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+.card h3 {
+  font-size: 20px;
+  color:#d4af37;
+  margin-bottom: 10px ;
+
+}
+.card p{
+  font-size: 14px;
+  color:#aaa;
+}
+/*Background video */
+.video-bg{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  z-index:-2
+}
+
+.overlay {
+  position: absolute;
+  top:0;
+  left: 0;
+  width:100%;
+  height: 100%;
+  background: rgba(196, 181, 124, 0.7);
+  z-index: -1;
+}
+
+/* .content{
+  text-align:center;
+  max-width:800px;
+  padding: 20px;
+  
+}
+
+.content h1 {
+  font-size: 48px;
+  color:#d4af37;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+.content p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color:#e0e0e0;
+}
+.content button{
+  padding: 12px 24px;
+  background-color:#d4af37;
+  color:#111;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  cursor:pointer;
+  border-radius: 5px;
+  transition: background 0.3s,transform 0.2s ;
+}
+
+.content button:hover{
+  background-color: #b89629;
+  transform:scale(1.05);
+} */
+
+
+/*2 new model*/
+.content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 20px;
+}
+
+
+
+button {
+  background-color:#b89629;
+  color: white;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #b89629;
 }

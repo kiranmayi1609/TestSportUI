@@ -9,182 +9,210 @@
 } */
 
 /* Navigation Bar */
-.navbar {
+/* .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 15px 30px;
   background-color: #111;
   border-bottom: 1px solid #444;
-}
+} */
 
-.navbar .logo {
+/* .navbar .logo {
   font-size: 24px;
   font-weight: bold;
-  color: #d4af37; /* Gold color */
-}
-
+  color: #d4af37; 
+} */
+/* 
 .logo img {
   height:50px;
   width:auto;
  background-color: transparent;
-}
+} */
 
-.navbar ul {
+/* .navbar ul {
   display: flex;
   list-style: none;
   margin: 0;
   padding: 0;
-}
+} */
 
-.navbar ul li {
+/* .navbar ul li {
   margin: 0 15px;
-}
+} */
 
-.navbar ul li a {
+/* .navbar ul li a {
   text-decoration: none;
   color: #fff;
   font-weight: 500;
   transition: color 0.3s;
-}
+} */
 
-.navbar ul li a:hover {
-  color: #d4af37; /* Gold hover effect */
-}
+/* .navbar ul li a:hover {
+  color: #d4af37; 
+} */
 
-.navbar .auth {
+/* .navbar .auth {
   display: flex;
   gap: 15px;
-}
+} */
 
-.navbar .auth a {
+/* .navbar .auth a {
   text-decoration: none;
   color: #fff;
   padding: 5px 15px;
   border: 1px solid #d4af37;
   border-radius: 20px;
   transition: background 0.3s, color 0.3s;
-}
+} */
 
-.navbar .auth a:hover {
+/* .navbar .auth a:hover {
   background-color: #d4af37;
   color: #111;
-}
-
-/* Hero Section */
-.hero {
+} */
+/* .search-block {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 80vh;
-  text-align: center;
-  background: linear-gradient(to bottom, #1a1a1a, #111);
-  color: #fff;
-}
+} */
 
-.hero h1 {
-  font-size: 48px;
-  color: #d4af37;
-  margin-bottom: 20px;
-}
+/* .search-block input {
+ padding: 5px;
+ border:none;
+ border-radius: 5px;
+ margin-right:5px;
+} */
 
-.hero p {
-  font-size: 18px;
-  margin-bottom: 30px;
-  max-width: 600px;
-}
-
-.hero button {
-  padding: 10px 20px;
-  /* border: 1px solid #d4af37; */
-  background-color: #d4af37 ;
-  font-style: italic;
-  font-family: Verdana;
-  /* background-color: transparent; */
-  color: #111;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background 0.3s, color 0.3s;
-}
-
-.hero button:hover {
-  background-color: #d4af37;
-  color: #111;
-}
-
- img {
-  /* display: block;
-  margin: auto; */
-  border-radius: 10px;
-  position:absolute;
-  top:8px;
-  left:12px;
-  font-size: 20px;
-
-  }
-
-  /* .shuttle {
-   position: relative;
-    bottom: 135px;
-   
-    margin: 0 auto;
-    padding-bottom:150px ;
-   
-  } */
-
-  .shuttle {
-    position: absolute;
-  bottom: 135;
-  right: 0;
-  transform: rotate(90deg); /* Adjust the degree of rotation as needed */
-  width: 200px;
-  }
-
-/* Card Section */
-.cards-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  padding: 40px;
-}
-
-.card {
+/* Navbar background color */
+/* .navbar {
   background-color: #222;
-  border: 1px solid #444;
-  border-radius: 10px;
-  padding: 20px;
-  text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-}
-
-.card img {
-  max-width: 100%;
-  border-radius: 10px;
-  margin-bottom: 20px;
-}
-
-.card h3 {
-  font-size: 20px;
-  color: #d4af37; /* Gold text */
-  margin-bottom: 10px;
-}
-
-.card p {
-  font-size: 14px;
-  color: #aaa;
-}
-
-/* Footer */
-footer {
   padding: 10px 20px;
-  text-align: center;
+} */
+
+/* Logo on the left */
+/* .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #d4af37; 
+  text-decoration: none;
+} */
+
+/* Centering the search bar */
+/* .search-container {
+  flex-grow: 1;
+  max-width: 300px;
+} */
+
+/* Style the search input */
+/* .search-container input {
+  background-color: #333;
+  border: 1px solid #d4af37;
+  color: white;
+} */
+
+/* Search button style */
+.btn-outline-gold {
+  color: #d4af37;
+  border: 1px solid #d4af37;
+}
+
+.btn-outline-gold:hover {
+  background-color: #d4af37;
+  color: #222;
+}
+
+/* Right-aligned dropdowns */
+.dropdowns {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Gold buttons */
+.btn-gold {
+  background-color: #d4af37;
+  color: #222;
+  border: none;
+}
+
+.btn-gold:hover {
+  background-color: #b8860b;
+  color: white;
+}
+
+/* Dropdown menu style */
+.dropdown-menu {
+  background-color: #222;
+  border: 1px solid #d4af37;
+}
+
+.dropdown-item {
+  color: #d4af37;
+}
+
+.dropdown-item:hover {
+  background-color: #d4af37;
+  color: #222;
+}
+
+/* Login button */
+.login-btn {
+  color: #d4af37;
+  border: 1px solid #d4af37;
+}
+
+.login-btn:hover {
+  background-color: #d4af37;
+  color: #222;
+}
+
+
+.container-fluid.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #d4af37; /* Gold color */
+}
+
+a img {
+  height:50px;
+  width:auto;
+ background-color: transparent;
+}
+
+/* Nav images */
+
+.btn-gold {
+  background-color:#b8860b;
+  color: black;
+  border: none;
+}
+
+.btn-outline-gold{
+  color:#b8860b;
+  border:1px solid #b8860b;
+}
+
+.navbar{
   background-color: #111;
-  color: #fff;
-  font-size: 14px;
+  padding: 10px;
+}
+
+.search-container input {
+  border:1px solid #b8860b ;
+  background-color: black;
+  color:white;
+}
+.search-container button {
+  border: 1px solid #b8860b;
+  color:#b8860b;
+}
+
+.dropdown-menu {
+  background-color: black;
+}
+.dropdown-item{
+  color:#b8860b;
+}
+.dropdown-item:hover{
+  background-color:#b8860b;
+  color:black;
 }

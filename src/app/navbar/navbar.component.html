@@ -1,13 +1,13 @@
 
 
 <!-- Navigation Bar -->
-<nav class="navbar">
+<!-- <nav class="navbar">
    <div class="logo">
          <a href="#">
             <img src="logo1.png" alt=" Elite Badminton Club">
           </a>
     </div>
-   <ul>
+     <ul>
       <li><a routerLink="/home"  routerLinkActive="active-link">Home</a></li>
       <li><a routerLink="/about" routerLinkActive="active-link">About</a></li>
       <li><a routerLink="/news"  routerLinkActive="active-link">News</a></li>
@@ -16,51 +16,63 @@
        <a routerLink="/profile" routerLinkActive="active-link">Profile</a>
        <a routerLink="/login" routerLinkActive="active-link">Login</a>
     </div>
+</nav> -->
+
+
+
+<!--Navigation Bar -->
+
+
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+      <!-- Logo on the Left -->
+      <a href="#">
+        <img src="logo1.png" alt=" Elite Badminton Club">
+      </a>
+
+      <!-- Centered Search -->
+      <div class="search-container mx-auto">
+          <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-gold" type="submit">Search</button>
+          </form>
+      </div>
+
+      <!-- Right Side Dropdowns -->
+      <div class="dropdowns d-flex">
+          <div class="btn-group me-2">
+              <button class="btn btn-gold dropdown-toggle" type="button" data-toggle="dropdown"  aria-haspopup="true" aria-expanded="false">
+                  Training
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="trainingDropdown">
+                <li> sessions</li>
+                <li>coaches</li>
+                  <a class="dropdown-item" href="#" >Sessions</a>
+                  <a class="dropdown-item" href="#" >Coaches</a>
+              </ul>
+          </div>
+
+          <div class="btn-group dropdown me-2">
+              <button class="btn btn-gold dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Bookings
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="bookingsDropdown">
+                  <li><a class="dropdown-item" href="#">Courts</a></li>
+                  <li><a class="dropdown-item" href="#">Tournaments</a></li>
+              </ul>
+          </div>
+
+          <div class="btn-group dropdown me-2">
+              <button class="btn btn-gold dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Stats
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="statsDropdown">
+                  <li><a class="dropdown-item" href="#">Leaderboard</a></li>
+                  <li><a class="dropdown-item" href="#">Player Stats</a></li>
+              </ul>
+          </div>
+
+          <a href="#" class="btn btn-outline-gold btn-sm login-btn">Login</a>
+      </div>
+  </div>
 </nav>
-
-
-
-<!-- Hero Section -->
-<!-- <section class="hero">
-<h1>Welcome to the Elite Badminton Club</h1>
-<p>Join our community to enhance your skills, participate in tournaments, and connect with top-level players.</p>
-<button>Join Now</button>
-
-  <img src="player_image.png"  alt="Badminton Players">
-   <div class="shuttle">
-    <img src="shuttle.png"  width="200"   alt="shuttle">
-   </div>
- 
-
-</section> -->
-
-<!-- Card Section -->
-<!-- <section class="cards-container" >
-<div class="card" (click)="navigateTo('/training')">
- 
-  <img src="https://via.placeholder.com/300x200" alt="Training">
-  <h3>Advanced Training Programs</h3>
-  <p>Boost your skills with personalized training sessions from expert coaches.</p>
-</div>
-<div class="card" (click)="navigateTo('tournaments')">
-  <img src="https://via.placeholder.com/300x200" alt="Tournaments">
-  <h3>Upcoming Tournaments</h3>
-  <p>Participate in elite tournaments to test your skills against top players.</p>
-</div>
-<div class="card"  (click)="navigateTo('community')">
-  <img src="https://via.placeholder.com/300x200" alt="Community">
-  <h3>Join Our Community</h3>
-  <p>Connect with other passionate players and become part of the club.</p>
-</div>
-</section> -->
-
-<!-- Footer -->
-<!-- <footer>
-© 2025 Elite Badminton Club. All rights reserved.
-</footer> -->
-
-
-
-
-
-

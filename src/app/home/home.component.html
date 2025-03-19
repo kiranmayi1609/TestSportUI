@@ -4,19 +4,35 @@
  
 <!-- Hero Section -->
 <section class="hero">
+  <video autoplay muted loop class="video-bg">
+    <source src="videoclip.mp4" type="video/mp4">
+    Your browser does not support the video tag 
+  </video>
+  <div class="overlay">  </div>
+  <div class="content">
     <h1>Welcome to the Elite Badminton Club</h1>
     <p>Join our community to enhance your skills, participate in tournaments, and connect with top-level players.</p>
     <button>Join Now</button>
+
+  </div>
     
-      <img src="player_image.png"  alt="Badminton Players">
+    
+      <!-- <img src="player_image.png"  alt="Badminton Players">
        <div class="shuttle">
         <img src="shuttle.png"  width="200"   alt="shuttle">
-       </div>
+       </div> -->
 </section>
 
 <!-- Card Section -->
 <section class="cards-container">
-  <!-- Correct way to use routerLink -->
+  
+
+       <div class="top-images">
+        <img src="player_image.png" alt="Badminton Players" class="player-image">
+        <div class="shuttle">
+          <img src="shuttle.png" width="200" alt="Shuttle">
+        </div>
+       </div>
     <div class="card"  (click)= "navigateTo('sessionList')"> 
             <img src="https://via.placeholder.com/300x200" alt="Training">
             <h3>Advanced Training Programs</h3>
@@ -32,6 +48,8 @@
       <h3>Join Our Community</h3>
       <p>Connect with other passionate players and become part of the club.</p>
     </div>
+
+    
 </section>
 
 
