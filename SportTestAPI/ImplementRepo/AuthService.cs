@@ -61,6 +61,7 @@ namespace SportTestAPI.ImplementRepo
                 Gender = register.Gender,
                 Contact = register.Contact,
                 EmailConfirmed = true,
+
                 ProfilePicture=string.IsNullOrEmpty(register.ProfilePicture)? "":register.ProfilePicture
             };
 
@@ -75,6 +76,9 @@ namespace SportTestAPI.ImplementRepo
                 };
             }
 
+            //Assigns default role "User"
+
+            await _userManager.AddToRoleAsync(user, "User");
             // Generate email confirmation token 
             var token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
             var confirmationLink = $"{_config["AppSettings:BaseUrl"]}/confirm_email?token={token}&email={user.Email}";

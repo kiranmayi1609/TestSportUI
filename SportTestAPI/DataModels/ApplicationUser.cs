@@ -15,7 +15,7 @@ namespace SportTestAPI.DataModels
         public string ProfilePicture { get; set; } = "";
 
         [Required]
-        public string Role { get; set; }
+        public string Role { get; set; } 
 
         [Required]
         public string Gender { get; set; }

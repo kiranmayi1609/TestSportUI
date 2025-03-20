@@ -12,6 +12,7 @@ using SportTestAPI.DataModels;
 using SportTestAPI.IGenericRepo;
 using SportTestAPI.ImplementRepo;
 using SportTestAPI.Mapping;
+using SportTestAPI.Service;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -31,6 +32,12 @@ builder.Services.AddSwaggerGen(c=>
 
 // Authentication & Authorization
 builder.Services.AddAuthorization();
+
+// Register StripeService
+builder.Services.AddScoped<StripeService>();
+
+// Add logging (if not already added)
+builder.Services.AddLogging();
 
 // Identity Configuration
 builder.Services.AddIdentityCore<ApplicationUser>()
