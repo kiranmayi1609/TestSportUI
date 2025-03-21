@@ -8,11 +8,89 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace SportTestAPI.Migrations
 {
     /// <inheritdoc />
-    public partial class AddBookingSeedData : Migration
+    public partial class RolesSedded : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.InsertData(
+                table: "AspNetRoles",
+                columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
+                values: new object[,]
+                {
+                    { "10efd525-49de-4dce-9d8e-739f0be5a5e6", "3", "Player", "Player" },
+                    { "d7398990-2a09-486b-98d9-1cad9cae8974", "1", "Admin", "Admin" },
+                    { "dc460f91-7ee7-490b-9d0a-0c7dfe2ce5b7", "2", "Coach", "Coach" }
+                });
+
+            migrationBuilder.UpdateData(
+                table: "AspNetUsers",
+                keyColumn: "Id",
+                keyValue: "123",
+                columns: new[] { "ConcurrencyStamp", "SecurityStamp" },
+                values: new object[] { "a3f029ce-ccf9-421a-aaf9-4c5a1bf24925", "9149ad8e-862b-46f9-a327-44acf2c7cb2d" });
+
+            migrationBuilder.UpdateData(
+                table: "AspNetUsers",
+                keyColumn: "Id",
+                keyValue: "143",
+                columns: new[] { "ConcurrencyStamp", "SecurityStamp" },
+                values: new object[] { "2dcc3221-1121-4723-a30b-e15cce1f080f", "158293b4-3b76-435c-8c47-1c1810843428" });
+
+            migrationBuilder.UpdateData(
+                table: "Invoices",
+                keyColumn: "InvoiceID",
+                keyValue: 1,
+                column: "DateIssued",
+                value: new DateTime(2025, 3, 21, 14, 33, 8, 774, DateTimeKind.Local).AddTicks(2528));
+
+            migrationBuilder.UpdateData(
+                table: "Invoices",
+                keyColumn: "InvoiceID",
+                keyValue: 2,
+                column: "DateIssued",
+                value: new DateTime(2025, 3, 21, 14, 33, 8, 774, DateTimeKind.Local).AddTicks(2577));
+
+            migrationBuilder.UpdateData(
+                table: "Matches",
+                keyColumn: "MatchID",
+                keyValue: 1,
+                column: "Date",
+                value: new DateTime(2025, 3, 21, 14, 33, 8, 774, DateTimeKind.Local).AddTicks(2643));
+
+            migrationBuilder.UpdateData(
+                table: "TrainingSessions",
+                keyColumn: "SessionID",
+                keyValue: 1,
+                column: "Date",
+                value: new DateTime(2025, 3, 21, 14, 33, 8, 774, DateTimeKind.Local).AddTicks(2619));
+
+            migrationBuilder.UpdateData(
+                table: "TrainingSessions",
+                keyColumn: "SessionID",
+                keyValue: 2,
+                column: "Date",
+                value: new DateTime(2025, 3, 21, 14, 33, 8, 774, DateTimeKind.Local).AddTicks(2624));
+        }
+
+        /// <inheritdoc />
+        protected override void Down(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.DeleteData(
+                table: "AspNetRoles",
+                keyColumn: "Id",
+                keyValue: "10efd525-49de-4dce-9d8e-739f0be5a5e6");
+
+            migrationBuilder.DeleteData(
+                table: "AspNetRoles",
+                keyColumn: "Id",
+                keyValue: "d7398990-2a09-486b-98d9-1cad9cae8974");
+
+            migrationBuilder.DeleteData(
+                table: "AspNetRoles",
+                keyColumn: "Id",
+                keyValue: "dc460f91-7ee7-490b-9d0a-0c7dfe2ce5b7");
+
             migrationBuilder.UpdateData(
                 table: "AspNetUsers",
                 keyColumn: "Id",
@@ -26,15 +104,6 @@ namespace SportTestAPI.Migrations
                 keyValue: "143",
                 columns: new[] { "ConcurrencyStamp", "SecurityStamp" },
                 values: new object[] { "2f8e173f-64e6-4707-8532-b15857f860ab", "f63e0991-062c-48c9-b585-baca6d5d1ff7" });
-
-            migrationBuilder.InsertData(
-                table: "Bookings",
-                columns: new[] { "BookingID", "CourtID", "Date", "UserID" },
-                values: new object[,]
-                {
-                    { 1, 1, new DateTime(2025, 3, 11, 10, 0, 0, 0, DateTimeKind.Unspecified), "123" },
-                    { 2, 2, new DateTime(2025, 3, 12, 11, 30, 0, 0, DateTimeKind.Unspecified), "143" }
-                });
 
             migrationBuilder.UpdateData(
                 table: "Invoices",
@@ -70,69 +139,6 @@ namespace SportTestAPI.Migrations
                 keyValue: 2,
                 column: "Date",
                 value: new DateTime(2025, 3, 11, 12, 21, 21, 304, DateTimeKind.Local).AddTicks(2609));
-        }
-
-        /// <inheritdoc />
-        protected override void Down(MigrationBuilder migrationBuilder)
-        {
-            migrationBuilder.DeleteData(
-                table: "Bookings",
-                keyColumn: "BookingID",
-                keyValue: 1);
-
-            migrationBuilder.DeleteData(
-                table: "Bookings",
-                keyColumn: "BookingID",
-                keyValue: 2);
-
-            migrationBuilder.UpdateData(
-                table: "AspNetUsers",
-                keyColumn: "Id",
-                keyValue: "123",
-                columns: new[] { "ConcurrencyStamp", "SecurityStamp" },
-                values: new object[] { "88f97a79-7c71-46ea-8f4f-67b9a798d545", "46745e64-f998-4461-ad9f-fcc90c6b9cd2" });
-
-            migrationBuilder.UpdateData(
-                table: "AspNetUsers",
-                keyColumn: "Id",
-                keyValue: "143",
-                columns: new[] { "ConcurrencyStamp", "SecurityStamp" },
-                values: new object[] { "e2d1dfa0-0830-4a46-95a4-ac6552ae69bb", "b0fbf43f-ec1f-411d-9022-2728f2840983" });
-
-            migrationBuilder.UpdateData(
-                table: "Invoices",
-                keyColumn: "InvoiceID",
-                keyValue: 1,
-                column: "DateIssued",
-                value: new DateTime(2025, 3, 11, 12, 14, 6, 846, DateTimeKind.Local).AddTicks(1971));
-
-            migrationBuilder.UpdateData(
-                table: "Invoices",
-                keyColumn: "InvoiceID",
-                keyValue: 2,
-                column: "DateIssued",
-                value: new DateTime(2025, 3, 11, 12, 14, 6, 846, DateTimeKind.Local).AddTicks(2030));
-
-            migrationBuilder.UpdateData(
-                table: "Matches",
-                keyColumn: "MatchID",
-                keyValue: 1,
-                column: "Date",
-                value: new DateTime(2025, 3, 11, 12, 14, 6, 846, DateTimeKind.Local).AddTicks(2124));
-
-            migrationBuilder.UpdateData(
-                table: "TrainingSessions",
-                keyColumn: "SessionID",
-                keyValue: 1,
-                column: "Date",
-                value: new DateTime(2025, 3, 11, 12, 14, 6, 846, DateTimeKind.Local).AddTicks(2093));
-
-            migrationBuilder.UpdateData(
-                table: "TrainingSessions",
-                keyColumn: "SessionID",
-                keyValue: 2,
-                column: "Date",
-                value: new DateTime(2025, 3, 11, 12, 14, 6, 846, DateTimeKind.Local).AddTicks(2101));
         }
     }
 }

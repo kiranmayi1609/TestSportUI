@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using SportTestAPI.DataModels;
 
@@ -25,6 +26,7 @@ namespace SportTestAPI.Database
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+            SeedRoles(modelBuilder);
 
 
             // Seeding data for AgeGroup
@@ -155,6 +157,18 @@ namespace SportTestAPI.Database
 
 
 
+        }
+
+        private void SeedRoles(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<IdentityRole>().HasData(
+
+                new IdentityRole() { Name="Admin",ConcurrencyStamp="1",NormalizedName="Admin"},
+                new IdentityRole() { Name="Coach",ConcurrencyStamp="2",NormalizedName="Coach"},
+                new IdentityRole() { Name="Player",ConcurrencyStamp="3",NormalizedName="Player"}
+
+
+             );
         }
     }
         
