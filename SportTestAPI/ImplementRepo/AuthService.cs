@@ -28,9 +28,11 @@ namespace SportTestAPI.ImplementRepo
     public class AuthService : IAuthService
     {
         private readonly UserManager<ApplicationUser> _userManager;//Manages user creation ,deletion user related operations 
-        private readonly SignInManager<ApplicationUser> _signInManager;//Handles user sign-in functionalities 
+        //private readonly RoleManager<IdentityRole> roleManager;
+        private readonly SignInManager<ApplicationUser> _signInManager;//Handles user sign-in functionalities pr
         private readonly IConfiguration _config;
-        private readonly IEmailService _emailService;
+        private readonly IEmailService _emailService;      
+        
         
 
         public AuthService(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, IConfiguration config,IEmailService emailService)

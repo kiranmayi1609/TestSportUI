@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http.HttpResults;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.Data;
 using Microsoft.AspNetCore.Mvc;
@@ -86,6 +87,12 @@ namespace SportTestAPI.Controllers
             return isValid ? Ok("2FA enabled successfully") : BadRequest("Invalid OTP code");
         }
 
+        //[HttpGet("protected")]
+        //[Authorize(Roles ="Admin")]
+        //public IActionResult Protected()
+        //{
+        //    return OK(new { Message = "This is a protected endpoint for Admins only" });
+        //}
 
         
     }
